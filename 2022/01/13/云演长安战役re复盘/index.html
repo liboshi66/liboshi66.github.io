@@ -1,231 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+extends includes/layout.pug
 
-  
-  <title>云演长安战役re复盘（1） | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：第二次参加比赛，而且做的题特别少，没啥经验，一天下来一个题也没拿下，但是我不灰心，我相信我一定能够学好re 第一个re： lemon下载附件打开发现跟进一脸懵！不会了….. 第二个re： combat_slogan这个题是做出来最多的，但奈何我见识太短… …附件是.jar文件，之后才知道是需要java反编译，用jd-gui 把附件拖入之后发现和这个main函数发现所以我以为这段数字肯定就是f">
-<meta property="og:type" content="article">
-<meta property="og:title" content="云演长安战役re复盘（1）">
-<meta property="og:url" content="http://example.com/2022/01/13/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9re%E5%A4%8D%E7%9B%98/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言：第二次参加比赛，而且做的题特别少，没啥经验，一天下来一个题也没拿下，但是我不灰心，我相信我一定能够学好re 第一个re： lemon下载附件打开发现跟进一脸懵！不会了….. 第二个re： combat_slogan这个题是做出来最多的，但奈何我见识太短… …附件是.jar文件，之后才知道是需要java反编译，用jd-gui 把附件拖入之后发现和这个main函数发现所以我以为这段数字肯定就是f">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/8298fdeb28634efbbf9ccf477efe1cc3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/e44269ac506a4b829f146c8c17fcf6f2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/4f3a161515be4f138b75af499709391e.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/841c4cb9df234d3982fe75ce73851068.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/998b63b159a542edb1f6e86163d35e91.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_12,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/d35282d82b944bfdb69816c1a63e23d4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/a89374c314574df294cdf2c7d77bf0b4.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/6c836de223d64427928d388dc052ad8a.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/3e32922b2f6e433ba44715caccdd457b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
-<meta property="article:published_time" content="2022-01-13T11:36:24.000Z">
-<meta property="article:modified_time" content="2022-01-13T12:25:44.848Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/8298fdeb28634efbbf9ccf477efe1cc3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+    article#article-container.post-content!=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
+        
+    if theme.reward.enable
+      !=partial('includes/post/reward', {}, {cache: true})
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
+
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
+
+    if page.comments !== false && theme.comments && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-云演长安战役re复盘" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/13/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9re%E5%A4%8D%E7%9B%98/" class="article-date">
-  <time datetime="2022-01-13T11:36:24.000Z" itemprop="datePublished">2022-01-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      云演长安战役re复盘（1）
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>前言：第二次参加比赛，而且做的题特别少，没啥经验，一天下来一个题也没拿下，但是我不灰心，我相信我一定能够学好re</strong></p>
-<h1 id="第一个re：-lemon"><a href="#第一个re：-lemon" class="headerlink" title="第一个re： lemon"></a>第一个re： lemon</h1><p>下载附件打开发现<img src="https://img-blog.csdnimg.cn/8298fdeb28634efbbf9ccf477efe1cc3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">跟进<br><img src="https://img-blog.csdnimg.cn/e44269ac506a4b829f146c8c17fcf6f2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><strong>一脸懵！</strong><br>不会了…..</p>
-<h1 id="第二个re：-combat-slogan"><a href="#第二个re：-combat-slogan" class="headerlink" title="第二个re： combat_slogan"></a>第二个re： combat_slogan</h1><p>这个题是做出来最多的，但奈何我见识太短… …<br>附件是<img src="https://img-blog.csdnimg.cn/4f3a161515be4f138b75af499709391e.png" alt="在这里插入图片描述">.jar文件，之后才知道是需要java反编译，<br>用jd-gui 把附件拖入之后<br><img src="https://img-blog.csdnimg.cn/841c4cb9df234d3982fe75ce73851068.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">发现<br><img src="https://img-blog.csdnimg.cn/998b63b159a542edb1f6e86163d35e91.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_12,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">和这个main函数<br><img src="https://img-blog.csdnimg.cn/d35282d82b944bfdb69816c1a63e23d4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>发现<img src="https://img-blog.csdnimg.cn/a89374c314574df294cdf2c7d77bf0b4.png" alt="在这里插入图片描述">所以我以为这段数字肯定就是flag的关键信息，rot13解密发现还是一堆数字，所以这个不是那么<img src="https://img-blog.csdnimg.cn/6c836de223d64427928d388dc052ad8a.png" alt="在这里插入图片描述">果然<br><img src="https://img-blog.csdnimg.cn/3e32922b2f6e433ba44715caccdd457b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{We_w11l_f1ght_t0_end_t0_end_cazy}</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/13/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9re%E5%A4%8D%E7%9B%98/" data-id="ckycy3trw0000v0vseyq35yc1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2022/01/18/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9%E5%A4%8D%E7%9B%98%EF%BC%882%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          云演长安战役复盘（2）
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/12/29/%E2%80%9D%E6%9D%8E%E6%9F%90%E7%9A%84%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E2%80%9C/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">”李某的寒假计划“</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/01/19/ctfshow%EF%BC%88re2%EF%BC%89/">ctfshow（re2）</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/18/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9%E5%A4%8D%E7%9B%98%EF%BC%882%EF%BC%89/">云演长安战役复盘（2）</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/13/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9re%E5%A4%8D%E7%9B%98/">云演长安战役re复盘（1）</a>
-          </li>
-        
-          <li>
-            <a href="/2021/12/29/%E2%80%9D%E6%9D%8E%E6%9F%90%E7%9A%84%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E2%80%9C/">”李某的寒假计划“</a>
-          </li>
-        
-          <li>
-            <a href="/2021/12/11/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2022 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
