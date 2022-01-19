@@ -5,17 +5,27 @@
   
 
   
-  <title>Hexo</title>
+  <title>ctfshow（re2） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="re">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="打开附件如下勒索病毒我去上网查了一下，发现是通过加密数据，所以这个题可能和加密有关，除了勒索病毒还有一个enflag.txt打开如下先不管这个第一步查壳这个exe程序无壳。第二步用ida32位打开这个shift+f12查看字符有个充值成功，跟进可以看到这个字符串      DHmqqvqxB^||zll@Jqjkwpmvez{可以知道是异或，脚本如下 123456s&#x3D;&quot;DH~mqqvqx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ctfshow（re2）">
+<meta property="og:url" content="http://example.com/2022/01/19/ctfshow%EF%BC%88re2%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="re">
+<meta property="og:description" content="打开附件如下勒索病毒我去上网查了一下，发现是通过加密数据，所以这个题可能和加密有关，除了勒索病毒还有一个enflag.txt打开如下先不管这个第一步查壳这个exe程序无壳。第二步用ida32位打开这个shift+f12查看字符有个充值成功，跟进可以看到这个字符串      DHmqqvqxB^||zll@Jqjkwpmvez{可以知道是异或，脚本如下 123456s&#x3D;&quot;DH~mqqvqx">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/1daa193ef1c740fabdc4bfb1a086be93.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/0a6e04c6214844beb3ba71ec9cd023fe.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/169e2e7e9f4944cfba8f62e19d2605a2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_17,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/3d5ff3be5e0b44e1ad38246153f6530b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/280a17374a6f46c7937979a0fa98260b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/15fdb51060a14adb93a2f6ea8608fb74.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/9f06e1ebb9104fe4a7ee726638209282.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_17,color_FFFFFF,t_70,g_se,x_16">
+<meta property="article:published_time" content="2022-01-19T06:05:30.000Z">
+<meta property="article:modified_time" content="2022-01-19T06:05:58.783Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/1daa193ef1c740fabdc4bfb1a086be93.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,9 +74,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ctfshow（re2）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ctfshow（re2）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/01/19/ctfshow%EF%BC%88re2%EF%BC%89/" class="article-date">
   <time datetime="2022-01-19T06:05:30.000Z" itemprop="datePublished">2022-01-19</time>
@@ -79,8 +87,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/19/ctfshow%EF%BC%88re2%EF%BC%89/">ctfshow（re2）</a>
+    <h1 class="article-title" itemprop="name">
+      ctfshow（re2）
     </h1>
   
 
@@ -103,198 +111,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-云演长安战役复盘（2）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/18/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9%E5%A4%8D%E7%9B%98%EF%BC%882%EF%BC%89/" class="article-date">
-  <time datetime="2022-01-18T11:31:54.000Z" itemprop="datePublished">2022-01-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/18/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9%E5%A4%8D%E7%9B%98%EF%BC%882%EF%BC%89/">云演长安战役复盘（2）</a>
-    </h1>
+    <a href="/2022/01/18/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9%E5%A4%8D%E7%9B%98%EF%BC%882%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">云演长安战役复盘（2）</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="re3：cute-doge"><a href="#re3：cute-doge" class="headerlink" title="re3：cute_doge"></a>re3：cute_doge</h1><p>附件打开如下<br><img src="https://img-blog.csdnimg.cn/0b70df46338842bf9650f59c549ee277.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_16,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">查壳<br><img src="https://img-blog.csdnimg.cn/2de383137e184f69a008f4295011e22d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">x64,用ida64分析<br><img src="https://img-blog.csdnimg.cn/41e67448af95426d9d5a421068be01ca.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">base64解码<br><img src="https://img-blog.csdnimg.cn/573b3f20190648fd9c23dbe2f512de76.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{Ch1na_yyds_cazy}<br><strong>总结：</strong> 在看到x64时，想到的是用x64dbg<br><img src="https://img-blog.csdnimg.cn/51964dc0565c4219a32f0a30264751ac.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_16,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">想用x64dbg调试一下，如下<br><img src="https://img-blog.csdnimg.cn/6bd4eeb229e043e1b86624309b8a4250.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">但是我被没有发现什么，后来wp别人是有的，有点不懂。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/18/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9%E5%A4%8D%E7%9B%98%EF%BC%882%EF%BC%89/" data-id="ckyk1e3ff0000xkvsc4u83atu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-云演长安战役re复盘" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/01/13/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9re%E5%A4%8D%E7%9B%98/" class="article-date">
-  <time datetime="2022-01-13T11:36:24.000Z" itemprop="datePublished">2022-01-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/13/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9re%E5%A4%8D%E7%9B%98/">云演长安战役re复盘（1）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>前言：第二次参加比赛，而且做的题特别少，没啥经验，一天下来一个题也没拿下，但是我不灰心，我相信我一定能够学好re</strong></p>
-<h1 id="第一个re：-lemon"><a href="#第一个re：-lemon" class="headerlink" title="第一个re： lemon"></a>第一个re： lemon</h1><p>下载附件打开发现<img src="https://img-blog.csdnimg.cn/8298fdeb28634efbbf9ccf477efe1cc3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">跟进<br><img src="https://img-blog.csdnimg.cn/e44269ac506a4b829f146c8c17fcf6f2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><strong>一脸懵！</strong><br>不会了…..</p>
-<h1 id="第二个re：-combat-slogan"><a href="#第二个re：-combat-slogan" class="headerlink" title="第二个re： combat_slogan"></a>第二个re： combat_slogan</h1><p>这个题是做出来最多的，但奈何我见识太短… …<br>附件是<img src="https://img-blog.csdnimg.cn/4f3a161515be4f138b75af499709391e.png" alt="在这里插入图片描述">.jar文件，之后才知道是需要java反编译，<br>用jd-gui 把附件拖入之后<br><img src="https://img-blog.csdnimg.cn/841c4cb9df234d3982fe75ce73851068.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">发现<br><img src="https://img-blog.csdnimg.cn/998b63b159a542edb1f6e86163d35e91.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_12,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">和这个main函数<br><img src="https://img-blog.csdnimg.cn/d35282d82b944bfdb69816c1a63e23d4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>发现<img src="https://img-blog.csdnimg.cn/a89374c314574df294cdf2c7d77bf0b4.png" alt="在这里插入图片描述">所以我以为这段数字肯定就是flag的关键信息，rot13解密发现还是一堆数字，所以这个不是那么<img src="https://img-blog.csdnimg.cn/6c836de223d64427928d388dc052ad8a.png" alt="在这里插入图片描述">果然<br><img src="https://img-blog.csdnimg.cn/3e32922b2f6e433ba44715caccdd457b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">flag{We_w11l_f1ght_t0_end_t0_end_cazy}</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/13/%E4%BA%91%E6%BC%94%E9%95%BF%E5%AE%89%E6%88%98%E5%BD%B9re%E5%A4%8D%E7%9B%98/" data-id="ckycy3trw0000v0vseyq35yc1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-”李某的寒假计划“" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/29/%E2%80%9D%E6%9D%8E%E6%9F%90%E7%9A%84%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E2%80%9C/" class="article-date">
-  <time datetime="2021-12-29T12:05:29.000Z" itemprop="datePublished">2021-12-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/12/29/%E2%80%9D%E6%9D%8E%E6%9F%90%E7%9A%84%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E2%80%9C/">”李某的寒假计划“</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="寒假计划第一步学习使用md格式"><a href="#寒假计划第一步学习使用md格式" class="headerlink" title="寒假计划第一步学习使用md格式"></a>寒假计划第一步学习使用md格式</h4><h5 id="1-首先就是映入眼帘的的标题"><a href="#1-首先就是映入眼帘的的标题" class="headerlink" title="1.首先就是映入眼帘的的标题"></a>1.首先就是映入眼帘的的标题</h5><h5 id="2-功能快捷键的截图"><a href="#2-功能快捷键的截图" class="headerlink" title="2.功能快捷键的截图"></a>2.功能快捷键的截图</h5><p><img src="https://img-blog.csdnimg.cn/f521e21503ec4c8aac9fd46b27695631.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAY2Fpbmlhbzc4Nzc3,size_10,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p>
-<h4 id="3-改变文本格式"><a href="#3-改变文本格式" class="headerlink" title="3.改变文本格式"></a>3.改变文本格式</h4><p><em>强调</em><br><strong>加粗</strong><br>==标记==<br><del>删除文本</del></p>
-<blockquote>
-<p>引用文本：我爱513</p>
-</blockquote>
-<h4 id="4-插入链接"><a href="#4-插入链接" class="headerlink" title="4.插入链接"></a>4.插入链接</h4><p>李某的博客链接：<a target="_blank" rel="noopener" href="https://github.com/liboshi66/liboshi66.github.io">我爱513</a></p>
-<h4 id="5-插入一个代码片"><a href="#5-插入一个代码片" class="headerlink" title="5.插入一个代码片"></a>5.插入一个代码片</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;我爱513&quot;</span>);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-生成一个适合我的列表"><a href="#6-生成一个适合我的列表" class="headerlink" title="6.生成一个适合我的列表"></a>6.生成一个适合我的列表</h4><ul>
-<li>我爱513<ul>
-<li>我很爱513<ul>
-<li>我真的很爱513 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>我爱513</li>
-<li>我很爱513</li>
-<li>我真的很爱513</li>
-</ol>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 你爱513吗？</li>
-</ul>
-<p>这六点差不多够用的了，那么就从今日起开启我的 <em><strong>逆向</strong></em> 学习之旅</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/29/%E2%80%9D%E6%9D%8E%E6%9F%90%E7%9A%84%E5%AF%92%E5%81%87%E8%AE%A1%E5%88%92%E2%80%9C/" data-id="ckxrht7ib00007gvs86107vhr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/12/11/hello-world/" class="article-date">
-  <time datetime="2021-12-11T09:34:00.822Z" itemprop="datePublished">2021-12-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/12/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/11/hello-world/" data-id="ckx1mi5650000rgvs2sas91nz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
